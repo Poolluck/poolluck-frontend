@@ -1,0 +1,21 @@
+{
+  "name": "poolluck-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "ethers": "^6.8.1",
+    "react-icons": "^4.10.1",
+    "react-confetti": "^6.1.0",
+    "react-tsparticles": "^2.12.0",
+    "tsparticles": "^2.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+}
