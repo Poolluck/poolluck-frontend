@@ -6,6 +6,7 @@ import { ImSpinner2 } from "react-icons/im";
 import Confetti from "react-confetti";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import "./App.css"; // importa o CSS externo
 
 function App() {
   const [walletConnected, setWalletConnected] = useState(false);
@@ -17,7 +18,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const contractAddress = "0x1666fA0b1E72a6203F111219283F00979382BaE9"; // seu contrato
+  const contractAddress = "0x1666fA0b1E72a6203F111219283F00979382BaE9";
 
   useEffect(() => {
     if (window.ethereum) {
@@ -59,7 +60,7 @@ function App() {
       await tx.wait();
       setMessage("🎉 Raspadinha comprada! Boa sorte!");
       setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 5000); // confete dura 5 segundos
+      setTimeout(() => setShowConfetti(false), 5000);
     } catch (error) {
       console.error(error);
       setMessage("Erro ao comprar raspadinha.");
@@ -67,7 +68,6 @@ function App() {
     setLoading(false);
   }
 
-  // Configurar partículas animadas
   async function particlesInit(engine) {
     await loadFull(engine);
   }
@@ -178,18 +178,5 @@ const styles = {
   },
 };
 
-const style = document.createElement("style");
-style.innerHTML = 
-  .spin {
-    animation: spin 1s linear infinite;
-    font-size: 1.5rem;
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-;
-document.head.appendChild(style);
-
 export default App;
+
